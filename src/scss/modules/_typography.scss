@@ -1,5 +1,4 @@
 @mixin setFont($size, $weight, $line-height: dense) {
-    @include baseFont();
 
     @if $size == "L" {
         font-size: 14px;
