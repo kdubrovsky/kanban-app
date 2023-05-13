@@ -1,0 +1,56 @@
+@use '../../../scss/modules/colors';
+@use '../../../scss/modules/typography';
+
+
+button {
+    cursor: pointer;
+    border-radius: 8px;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    outline: 0;
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+
+.main {
+    @include typography.setFont(M, medium);
+    padding: 8px 8px 6px 8px;
+    gap: 8px;
+    color: colors.$gray-0;
+    background-color: colors.$brand-60;
+    border-bottom: 2px solid colors.$brand-70;
+}
+
+.shortcut {
+    @include typography.setFont(XS, light);
+    display: inline-block;
+    line-height: 14px;
+    padding: 0px 4px;
+    border-radius: 4px;
+    color: rgba(colors.$gray-0, 0.8);
+    background-color: transparent;
+    border: 1px solid rgba(colors.$gray-0, 0.16);
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+
+style,            // style:      'main', 'ghost', 'round', 'select'
+priority,         // priority:  'primary','secondary'
+size,             // size:      'standard', 'small'
+shortcut,         // shortcut text
+icon,             // svg icon
+onClick,          // onClick handler
+title             // button title
+*/
