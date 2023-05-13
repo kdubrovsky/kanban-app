@@ -1,0 +1,25 @@
+@mixin setFont($size, $weight, $line-height: dense) {
+    @include baseFont();
+
+    @if $size == "L" {
+        font-size: 14px;
+    } @else if $size == "M" {
+        font-size: 13px;
+    } @else if $size == "S" {
+        font-size: 12px;
+    } @else if $size== "XS" {
+        font-size: 11px;
+    }
+    @if $weight == "regular" {
+        font-weight: 400;
+    } @else if $weight == "light" {
+        font-weight: 300;
+    } @else if $weight == "medium" {
+        font-weight: 500;
+    }
+    @if $line-height == "dense" {
+        line-height: 16px;
+    } @else if $line-height == "sparse" {
+        line-height: 20px;
+    }
+}

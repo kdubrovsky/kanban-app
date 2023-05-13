@@ -1,0 +1,62 @@
+/* grayscale colors */
+
+$gray-0: #ffffff;
+$gray-10: #f2f4f8;
+$gray-20: #dde1e6;
+$gray-30: #c1c7cd;
+$gray-40: #a2a9b0;
+$gray-50: #878d96;
+$gray-60: #697077;
+$gray-70: #4d5358;
+$gray-80: #343a3f;
+$gray-90: #21272a;
+$gray-100: #121619;
+
+/* brand colors */
+
+$brand-10: #f6f2ff;
+$brand-20: #e8daff;
+$brand-30: #d4bbff;
+$brand-40: #be95ff;
+$brand-50: #a56eff;
+$brand-60: #8a3ffc;
+$brand-70: #6929c4;
+$brand-80: #491d8b;
+$brand-90: #31135e;
+$brand-100: #1c0f30;
+
+/* color signals */
+
+$danger-100: #da1e28;
+$danger-10: #fff0f0;
+
+$safe-100: #198038;
+$safe-10: #defbe6;
+
+/* statuses */
+
+$status-new_light: $gray-10;
+$status-new_dark: $gray-100;
+
+$status-inprogress_light: $brand-10;
+$status-inprogress_dark: $brand-60;
+
+$status-paused_light: $danger-10;
+$status-paused_dark: $danger-100;
+
+$status-done_light: $safe-10;
+$status-done_dark: $safe-100;
+
+/* priority */
+
+$priority-normal_text: $gray-100;
+$priority-normal_bg: $gray-10;
+
+$priority-minor-text: $gray-60;
+$priority-minor_bg: $gray-10;
+
+$priority-major-text: $danger-100;
+$priority-major_bg: $danger-10;
+
+$priority-critical-text: $gray-0;
+$priority-critical_bg: $danger-100;
