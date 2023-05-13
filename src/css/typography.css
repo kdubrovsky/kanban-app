@@ -1,0 +1,22 @@
+:root {
+
+    --font-family: "Inter", sans-serif;
+
+    /* font sizes */
+
+    --font-size-L: 14px;
+    --font-size-M: 13px;
+    --font-size-S: 12px;
+    --font-size-XS: 11px;
+
+    /* font weights */
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+
+    /* line heights */
+
+    --line-height-dense: 16px;
+    --line-height-sparse: 20px;
+}
