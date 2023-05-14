@@ -1,6 +1,5 @@
-@use '../../../scss/modules/colors';
-@use '../../../scss/modules/typography';
-
+@use "../../../scss/modules/colors";
+@use "../../../scss/modules/typography";
 
 button {
     cursor: pointer;
@@ -15,42 +14,106 @@ button {
     }
 }
 
-.main {
-    @include typography.setFont(M, medium);
-    padding: 8px 8px 6px 8px;
-    gap: 8px;
-    color: colors.$gray-0;
-    background-color: colors.$brand-60;
-    border-bottom: 2px solid colors.$brand-70;
-}
-
 .shortcut {
     @include typography.setFont(XS, light);
     display: inline-block;
     line-height: 14px;
     padding: 0px 4px;
-    border-radius: 4px;
-    color: rgba(colors.$gray-0, 0.8);
     background-color: transparent;
-    border: 1px solid rgba(colors.$gray-0, 0.16);
+    border: 1px solid colors.$gray-100;
+    border-radius: 4px;
 }
 
+.main {
+    @include typography.setFont(M, medium);
+    padding: 8px 8px 6px 8px;
+    gap: 8px;
 
+    &.primary {
+        color: colors.$gray-0;
+        background-color: colors.$brand-60;
+        border-bottom: 2px solid colors.$brand-70;
 
+        .shortcut {
+            color: rgba(colors.$gray-0, 0.8);
+            border-color: rgba(colors.$gray-0, 0.16);
+        }
 
+        &:hover {
+            background: linear-gradient(
+                    to bottom,
+                    rgba(colors.$brand-80, 0.24),
+                    rgba(colors.$brand-80, 0.24)
+                ),
+                colors.$brand-60;
+        }
 
+        &:active {
+            background: linear-gradient(
+                    to bottom,
+                    rgba(colors.$brand-80, 0.32),
+                    rgba(colors.$brand-80, 0.32)
+                ),
+                colors.$brand-60;
+        }
 
+        &[disabled] {
+            color: colors.$gray-60;
+            background-color: colors.$gray-30;
+            border-bottom: 2px solid colors.$gray-40;
 
+            .shortcut {
+                color: colors.$gray-60;
+                border-color: colors.$gray-40;
+            }
 
+            &:hover {
+                background: colors.$gray-30;
+            }
+        }
+    }
 
+    &.secondary {
+        color: colors.$gray-100;
+        background-color: colors.$gray-20;
+        border-bottom: 2px solid colors.$gray-30;
 
-/* 
+        .shortcut {
+            color: colors.$gray-60;
+            border-color: colors.$gray-30;
+        }
 
-style,            // style:      'main', 'ghost', 'round', 'select'
-priority,         // priority:  'primary','secondary'
-size,             // size:      'standard', 'small'
-shortcut,         // shortcut text
-icon,             // svg icon
-onClick,          // onClick handler
-title             // button title
-*/
+        &:hover {
+            background: linear-gradient(
+                    to bottom,
+                    rgba(colors.$gray-40, 0.24),
+                    rgba(colors.$gray-40, 0.24)
+                ),
+                colors.$gray-20;
+        }
+
+        &:active {
+            background: linear-gradient(
+                    to bottom,
+                    rgba(colors.$gray-40, 0.32),
+                    rgba(colors.$gray-40, 0.32)
+                ),
+                colors.$gray-20;
+        }
+
+        &[disabled] {
+            color: colors.$gray-60;
+            background-color: colors.$gray-30;
+            border-bottom: 2px solid colors.$gray-40;
+
+            .shortcut {
+                color: colors.$gray-60;
+                border-color: colors.$gray-40;
+            }
+
+            &:hover {
+                background: colors.$gray-30;
+            }
+        }
+    }
+}

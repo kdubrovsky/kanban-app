@@ -7,15 +7,15 @@ function App() {
     }
 
     return (
-        
         <>
             <Button
                 style='main'
-                priority='primary'
+                priority='secondary'
                 size='standard'
-                shortcut='Shortcut111'
+                shortcut='Shortcut'
                 onClick={dummyHandler}
-                title="Okaaaay"
+                title='Button'
+                disabled={true}
             />
         </>
     )

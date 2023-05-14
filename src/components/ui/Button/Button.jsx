@@ -1,4 +1,5 @@
 import css from './Button.module.scss';
+import classnames from 'classnames';
 
 function Button({
     type = 'button',  // submit or button
@@ -8,14 +9,19 @@ function Button({
     shortcut,         // shortcut text
     icon,             // svg icon
     onClick,          // onClick handler
-    title             // button title
+    title,            // button title
+    disabled = false
 }) {
+
+    const classNames = classnames(css[style], css[priority], css[size]);
+
 
     return (
         <button
-            className={css.main}
+            className={classNames}
             type={type}
             onClick={onClick}
+            disabled={disabled}
         >
             {title}
             {shortcut && <span className={css.shortcut}>{shortcut}</span>}
