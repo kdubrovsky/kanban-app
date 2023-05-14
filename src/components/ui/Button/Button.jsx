@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 function Button({
     type = 'button',  // submit or button
-    style,            // style:      'main', 'ghost', 'round', 'select'
+    style,            // style:      'main', 'ghost', 'round', 'dropdown'
     priority,         // priority:  'primary','secondary'
     size,             // size:      'standard', 'small'
     shortcut,         // shortcut text

@@ -183,3 +183,35 @@ button {
         padding: 4px;
     }
 }
+
+.dropdown {
+    @include typography.setFont(M, regular);
+    padding: 8px 8px 6px 8px;
+    gap: 8px;
+    color: colors.$gray-100;
+    background-color: colors.$gray-10;
+    border-bottom: 2px solid colors.$gray-20;
+
+    svg {
+        width: 16px;
+        fill: colors.$gray-100;
+    }
+
+    &:hover {
+        background: linear-gradient(
+                to bottom,
+                rgba(colors.$gray-30, 0.24),
+                rgba(colors.$gray-30, 0.24)
+            ),
+            colors.$gray-10;
+    }
+
+    &:active {
+        background: linear-gradient(
+                to bottom,
+                rgba(colors.$gray-30, 0.32),
+                rgba(colors.$gray-30, 0.32)
+            ),
+            colors.$gray-10;
+    }
+}
