@@ -146,3 +146,40 @@ button {
         gap: 4px;
     }
 }
+
+.round {
+    background-color: transparent;
+    border-radius: 50%;
+
+    svg {
+        width: 16px;
+    }
+
+    &.secondary {
+        svg {
+            fill: colors.$gray-60;
+        }
+    }
+
+    &.primary {
+        svg {
+            fill: colors.$gray-100;
+        }
+    }
+
+    &:hover {
+        background-color: rgba(colors.$gray-30, 0.24);
+    }
+
+    &:active {
+        background-color: rgba(colors.$gray-30, 0.32);
+    }
+
+    &.standard {
+        padding: 8px;
+    }
+
+    &.small {
+        padding: 4px;
+    }
+}

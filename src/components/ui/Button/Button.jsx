@@ -26,7 +26,7 @@ function Button({
             onClick={onClick}
             disabled={(style === 'main') && disabled}
         >
-            {title}
+            {style != 'round' && title}
             {shortcutJSX}
         </button>
     )
