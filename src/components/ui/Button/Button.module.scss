@@ -117,3 +117,32 @@ button {
         }
     }
 }
+
+.ghost {
+    @include typography.setFont(M, regular);
+    background-color: transparent;
+    color: colors.$gray-60;
+
+    svg {
+        width: 16px;
+        fill: colors.$gray-60;
+    }
+
+    &:hover {
+        background-color: rgba(colors.$gray-30, 0.24);
+    }
+
+    &:active {
+        background-color: rgba(colors.$gray-30, 0.32);
+    }
+
+    &.standard {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    &.small {
+        padding: 4px;
+        gap: 4px;
+    }
+}
