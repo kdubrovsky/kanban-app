@@ -4,14 +4,14 @@ import css from './Button.module.scss';
 import classnames from 'classnames';
 
 function Button({
-    type = 'button',  // submit or button
-    style,            // style:      'main', 'ghost', 'round', 'dropdown'
-    priority,         // priority:  'primary','secondary'
-    size,             // size:      'standard', 'small'
-    shortcut,         // shortcut text
-    icon,             // svg icon
-    onClick,          // onClick handler
-    title,            // button title
+    type = 'button',        // submit or button
+    style,                  // style:      'main', 'ghost', 'round', 'dropdown'
+    priority,               // priority:  'primary','secondary'
+    size = 'standard',      // size:      'standard', 'small'
+    shortcut,               // shortcut text
+    icon,                   // svg icon
+    onClick,                // onClick handler
+    title,                  // button title
     disabled = false
 }) {
 
