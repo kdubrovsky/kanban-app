@@ -1,0 +1,79 @@
+@use "../../../scss/modules/typography";
+@use "../../../scss/modules/colors";
+
+.badge {
+    @include typography.setFont(M, regular);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    cursor: default;
+}
+
+.status {
+    &.new {
+        color: colors.$gray-100;
+        background-color: colors.$gray-10;
+    }
+
+    &.inprogress {
+        color: colors.$brand-60;
+        background-color: colors.$brand-10;
+    }
+
+    &.paused {
+        color: colors.$danger-100;
+        background-color: colors.$danger-10;
+    }
+
+    &.done {
+        color: colors.$safe-100;
+        background-color: colors.$safe-10;
+    }
+}
+
+.priority {
+    &.compact {
+        padding: 2px 5px;
+    }
+
+    &.normal {
+        color: colors.$gray-100;
+        background-color: colors.$gray-10;
+    }
+
+    &.minor {
+        color: colors.$gray-60;
+        background-color: colors.$gray-10;
+    }
+
+    &.major {
+        color: colors.$danger-100;
+        background-color: colors.$danger-10;
+    }
+
+    &.critical {
+        color: colors.$gray-0;
+        background-color: colors.$danger-100;
+    }
+}
+
+.kanban {
+    padding: 4px 8px;
+    color: colors.$gray-0;
+
+    &.new {
+        background-color: colors.$gray-60;
+    }
+
+    &.inprogress {
+        background-color: colors.$brand-60;
+    }
+
+    &.paused {
+        background-color: colors.$danger-100;
+    }
+
+    &.done {
+        background-color: colors.$safe-100;
+    }
+}
