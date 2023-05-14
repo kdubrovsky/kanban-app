@@ -1,4 +1,5 @@
 import Button from "./components/ui/Button/Button"
+import Badge from "./components/ui/Badge/Badge";
 
 function App() {
 
@@ -6,12 +7,114 @@ function App() {
         console.log(`Click`);
     }
 
+    // type,                   // 'status', 'priority','kanban'
+    // priority,               // 'normal', 'minor', 'major', 'critical'
+    // status,                 // 'new', 'inprogress', 'paused', 'done'
+    // compact = false,              
+    // title,                  // badge title
+
+
+
     return (
         <>
-            <h1>UI/Button</h1>
-            <div>
-                <h2>Main</h2>
-                <h3>primary</h3>
+            <h1>UI Components</h1>
+            <h2>Badges</h2>
+            <h3>Status badges</h3>
+            <div className="inline-group">
+                <Badge
+                    type='status'
+                    status='new'
+                    title='New'
+                />
+                <Badge
+                    type='status'
+                    status='inprogress'
+                    title='In progress'
+                />
+                <Badge
+                    type='status'
+                    status='paused'
+                    title='Paused'
+                />
+                <Badge
+                    type='status'
+                    status='done'
+                    title='Done'
+                />
+            </div>
+            <h3>Priority badges</h3>
+            <div className="inline-group">
+                <Badge
+                    type='priority'
+                    priority='normal'
+                    title='Normal'
+                />
+                <Badge
+                    type='priority'
+                    priority='normal'
+                    title='Normal'
+                    compact={true}
+                />
+                <Badge
+                    type='priority'
+                    priority='minor'
+                    title='Minor'
+                />
+                <Badge
+                    type='priority'
+                    priority='minor'
+                    title='Minor'
+                    compact={true}
+                />
+                <Badge
+                    type='priority'
+                    priority='major'
+                    title='Major'
+                />
+                <Badge
+                    type='priority'
+                    priority='major'
+                    title='Major'
+                    compact={true}
+                />
+                <Badge
+                    type='priority'
+                    priority='critical'
+                    title='Critical'
+                />
+                <Badge
+                    type='priority'
+                    priority='critical'
+                    title='Critical'
+                    compact={true}
+                />
+            </div>
+            <h3>Kanban badges</h3>
+            <div className="inline-group">
+                <Badge
+                    type='kanban'
+                    status='new'
+                    title='New'
+                />
+                <Badge
+                    type='kanban'
+                    status='inprogress'
+                    title='In progress'
+                />
+                <Badge
+                    type='kanban'
+                    status='paused'
+                    title='Paused'
+                />
+                <Badge
+                    type='kanban'
+                    status='done'
+                    title='Done'
+                />
+            </div>
+            <h2>Buttons</h2>
+            <h3>Main</h3>
+            <div className="inline-group">
                 <Button
                     style='main'
                     priority='primary'
@@ -19,7 +122,6 @@ function App() {
                     onClick={dummyHandler}
                     title='Button'
                 />
-                <h3>secondary</h3>
                 <Button
                     style='main'
                     priority='secondary'
@@ -27,7 +129,6 @@ function App() {
                     onClick={dummyHandler}
                     title='Button'
                 />
-                <h3>disabled</h3>
                 <Button
                     style='main'
                     priority='secondary'
@@ -36,28 +137,27 @@ function App() {
                     title='Button'
                     disabled={true}
                 />
-                <h2>Dropdown</h2>
-                <Button
-                    style='dropdown'
-                    icon='filter'
-                    onClick={dummyHandler}
-                    title='Filter'
-                />
-                <h2>Ghost</h2>
-                <h3>standard + icon</h3>
+            </div>
+            <h3>Dropdown</h3>
+            <Button
+                style='dropdown'
+                icon='filter'
+                onClick={dummyHandler}
+                title='Filter'
+            />
+            <h3>Ghost</h3>
+            <div className="inline-group">
                 <Button
                     style='ghost'
                     icon='fake'
                     onClick={dummyHandler}
                     title='Button'
                 />
-                <h3>standard</h3>
                 <Button
                     style='ghost'
                     onClick={dummyHandler}
                     title='Button'
                 />
-                <h3>small + icon</h3>
                 <Button
                     style='ghost'
                     size='small'
@@ -65,37 +165,36 @@ function App() {
                     onClick={dummyHandler}
                     title='Button'
                 />
-                <h3>small</h3>
+
                 <Button
                     style='ghost'
                     size='small'
                     onClick={dummyHandler}
                     title='Button'
                 />
-                <h2>Round</h2>
-                <h3>standard primary</h3>
+            </div>
+
+            <h3>Round</h3>
+            <div className="inline-group">
                 <Button
                     style='round'
                     priority='primary'
                     icon='fake'
                     onClick={dummyHandler}
                 />
-                <h3>small primary</h3>
-                <Button
-                    style='round'
-                    priority='primary'
-                    size='small'
-                    icon='fake'
-                    onClick={dummyHandler}
-                />
-                <h3>standard secondary</h3>
                 <Button
                     style='round'
                     priority='secondary'
                     icon='fake'
                     onClick={dummyHandler}
                 />
-                <h3>small secondary</h3>
+                <Button
+                    style='round'
+                    priority='primary'
+                    size='small'
+                    icon='fake'
+                    onClick={dummyHandler}
+                />
                 <Button
                     style='round'
                     priority='secondary'
