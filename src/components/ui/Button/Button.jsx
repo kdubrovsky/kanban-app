@@ -14,17 +14,20 @@ function Button({
 }) {
 
     const classNames = classnames(css[style], css[priority], css[size]);
-
+    const shortcutJSX = (style === 'main' && shortcut) &&
+        <span className={css.shortcut}>
+            {shortcut}
+        </span>
 
     return (
         <button
             className={classNames}
             type={type}
             onClick={onClick}
-            disabled={disabled}
+            disabled={(style === 'main') && disabled}
         >
             {title}
-            {shortcut && <span className={css.shortcut}>{shortcut}</span>}
+            {shortcutJSX}
         </button>
     )
 
