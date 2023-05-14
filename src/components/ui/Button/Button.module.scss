@@ -12,6 +12,11 @@ button {
     &[disabled] {
         cursor: not-allowed;
     }
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .shortcut {
@@ -124,8 +129,7 @@ button {
     color: colors.$gray-60;
 
     svg {
-        width: 16px;
-        fill: colors.$gray-60;
+        color: colors.$gray-60;
     }
 
     &:hover {
@@ -151,19 +155,15 @@ button {
     background-color: transparent;
     border-radius: 50%;
 
-    svg {
-        width: 16px;
-    }
-
     &.secondary {
         svg {
-            fill: colors.$gray-60;
+            color: colors.$gray-60;
         }
     }
 
     &.primary {
         svg {
-            fill: colors.$gray-100;
+            color: colors.$gray-100;
         }
     }
 
@@ -193,8 +193,7 @@ button {
     border-bottom: 2px solid colors.$gray-20;
 
     svg {
-        width: 16px;
-        fill: colors.$gray-100;
+        color: colors.$gray-100;
     }
 
     &:hover {
