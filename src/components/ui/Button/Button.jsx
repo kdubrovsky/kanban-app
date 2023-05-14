@@ -1,3 +1,5 @@
+import Icon from '../Icon/Icon';
+
 import css from './Button.module.scss';
 import classnames from 'classnames';
 
@@ -26,6 +28,7 @@ function Button({
             onClick={onClick}
             disabled={(style === 'main') && disabled}
         >
+            {icon && <Icon name={icon} />}
             {style != 'round' && title}
             {shortcutJSX}
         </button>

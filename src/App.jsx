@@ -13,6 +13,7 @@ function App() {
                 priority='secondary'
                 size='standard'
                 shortcut='Shortcut'
+                icon='search'
                 onClick={dummyHandler}
                 title='Button'
                 disabled={true}
