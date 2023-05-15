@@ -1,0 +1,33 @@
+@use "../../../scss/modules/typography";
+@use "../../../scss/modules/colors";
+
+.userpic {
+    background-color: colors.$brand-20;
+    color: colors.$brand-60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+
+    img {
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &.large {
+        @include typography.setFont(M, medium);
+        width: 24px;
+        height: 24px;
+    }
+
+    &.small {
+        @include typography.setFont(XS, medium);
+        width: 20px;
+        height: 20px;
+    }
+}

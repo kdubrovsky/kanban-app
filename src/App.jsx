@@ -1,6 +1,7 @@
 import Button from "./components/ui/Button/Button"
 import Badge from "./components/ui/Badge/Badge";
 import Input from "./components/ui/Input/Input";
+import Userpic from "./components/ui/Userpic/Userpic";
 
 function App() {
 
@@ -211,6 +212,34 @@ function App() {
                 name='exampleInput'
                 placeholder="Placeholder"
             />
+            <h2>Userpic</h2>
+            <h3>Userpic with image or text</h3>
+            <div className="inline-group">
+                <Userpic
+                    img='./src/assets/images/userpic1.png'
+                    username='Vasya'
+                    size='large'
+                />
+                <Userpic
+                    img='./src/assets/images/userpic2.png'
+                    username='Kolya'
+                    size='small'
+                />
+                <Userpic
+                    username='Vasya'
+                    size='large'
+                />
+                <Userpic
+                    username='Kolya'
+                    size='small'
+                />
+                <Userpic
+                    size='large'
+                />
+                <Userpic
+                    size='small'
+                />
+            </div>
         </>
     )
 }
