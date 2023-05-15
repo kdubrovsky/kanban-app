@@ -1,5 +1,6 @@
 import Button from "./components/ui/Button/Button"
 import Badge from "./components/ui/Badge/Badge";
+import Input from "./components/ui/Input/Input";
 
 function App() {
 
@@ -203,6 +204,13 @@ function App() {
                     onClick={dummyHandler}
                 />
             </div>
+            <h2>Input</h2>
+            <h3>Text input</h3>
+            <Input
+                id='exampleInput'
+                name='exampleInput'
+                placeholder="Placeholder"
+            />
         </>
     )
 }
