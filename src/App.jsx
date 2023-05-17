@@ -2,6 +2,7 @@ import Button from "./components/ui/Button/Button"
 import Badge from "./components/ui/Badge/Badge";
 import Input from "./components/ui/Input/Input";
 import Userpic from "./components/ui/Userpic/Userpic";
+import Textarea from "./components/ui/Textarea/Textarea";
 
 function App() {
 
@@ -212,6 +213,9 @@ function App() {
                 name='exampleInput'
                 placeholder="Placeholder"
             />
+            <h3>Textarea input</h3>
+            <div className="inline-group"></div>
+            <Textarea id="textarea1" name="textarea1" placeholder="Textarea placeholder" />
             <h2>Userpic</h2>
             <h3>Userpic with image or text</h3>
             <div className="inline-group">
