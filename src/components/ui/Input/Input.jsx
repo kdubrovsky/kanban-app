@@ -13,7 +13,7 @@ function Input({
             type='text'
             name={name}
             id={id}
-            class={css.input}
+            className={css.input}
             // value={initialValue}  // waits for real state handling
             placeholder={placeholder} />
     )
