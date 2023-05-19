@@ -1,0 +1,33 @@
+@use "../../../../scss/modules/colors";
+@use "../../../../scss/modules/typography";
+
+.radiobutton {
+    @include typography.setFont(S, regular);
+    min-width: 64px;
+    cursor: pointer;
+    display: grid;
+
+    label {
+        grid-area: 1 / 1;
+        place-self: center;
+        padding: 4px 16px;
+        cursor: inherit;
+    }
+    input {
+        grid-area: 1 / 1;
+        background-color: colors.$gray-10;
+        
+
+        &:hover {
+            background-color: colors.$gray-20;
+        }
+
+        &:checked {
+            background-color: colors.$brand-60;
+            & + label {
+                color: colors.$gray-0;
+                cursor: default;
+            }
+        }
+    }
+}
