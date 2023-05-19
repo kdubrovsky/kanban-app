@@ -3,6 +3,8 @@ import Badge from "./components/ui/Badge/Badge";
 import Input from "./components/ui/Input/Input";
 import Userpic from "./components/ui/Userpic/Userpic";
 import Textarea from "./components/ui/Textarea/Textarea";
+import RadioButtonGroup from "./components/ui/RadioGroup/RadioButtonGroup";
+import RadioButton from "./components/ui/RadioGroup/RadioButton/RadioButton";
 
 function App() {
 
@@ -206,6 +208,31 @@ function App() {
                     onClick={dummyHandler}
                 />
             </div>
+            <h2>RadioGroup</h2>
+            <h3>Group of radiobuttons</h3>
+            <RadioButtonGroup
+                name='radio-button-group'
+                defaultSelected='radio-1'
+            >
+                <RadioButton
+                    name='radio-button-group'
+                    title='Option1'
+                    value='radio-1'
+                    id='radio-1'
+                    checked={true}
+                />
+                <RadioButton
+                    name='radio-button-group'
+                    title='Option2'
+                    value='radio-2'
+                    id='radio-2'
+                />
+                <RadioButton
+                    title='Option3'
+                    value='radio-3'
+                    id='radio-3'
+                />
+            </RadioButtonGroup>
             <h2>Input</h2>
             <h3>Text input</h3>
             <Input
@@ -216,12 +243,13 @@ function App() {
             <h3>Textarea input</h3>
             <div className="inline-group"></div>
             <Textarea id="textarea1" name="textarea1" placeholder="Textarea placeholder" />
+
             <h2>Userpic</h2>
             <h3>Userpic with image or text</h3>
             <div className="inline-group">
                 <Userpic
                     img='./src/assets/images/userpic1.png'
-                    username='Vasya'
+                    sername='Vasya'
                     size='large'
                 />
                 <Userpic
