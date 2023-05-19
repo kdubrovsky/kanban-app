@@ -1,0 +1,8 @@
+@use "../../../scss/modules/colors";
+@use "../../../scss/modules/typography";
+
+.radiobuttonGroup {
+    display: inline-flex;
+    border-radius: 4px;
+    overflow: hidden;
+}
