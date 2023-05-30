@@ -215,22 +215,22 @@ function App() {
                 defaultSelected='radio-1'
             >
                 <RadioButton
-                    name='radio-button-group'
                     title='Option1'
                     value='radio-1'
                     id='radio-1'
-                    checked={true}
+                    key='radio-1'
                 />
                 <RadioButton
-                    name='radio-button-group'
                     title='Option2'
                     value='radio-2'
                     id='radio-2'
+                    key='radio-2'
                 />
                 <RadioButton
                     title='Option3'
                     value='radio-3'
                     id='radio-3'
+                    key='radio-3'
                 />
             </RadioButtonGroup>
             <h2>Input</h2>

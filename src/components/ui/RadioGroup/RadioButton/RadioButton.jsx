@@ -1,18 +1,22 @@
 import css from './RadioButton.module.scss'
 
 function RadioButton({
-    value,
     title,
+    value,
     id,
-    checked
+    name,
+    idSelected,
+    onClickHandler
+
 }) {
     return (
-        <li className={css.radiobutton}>
+        <li className={css.radiobutton} onClick={onClickHandler}>
             <input
                 type='radio'
+                name={name}
                 id={id}
                 value={value}
-                checked={checked}
+                checked={idSelected === id}
             />
             <label htmlFor={id}>
                 {title}
